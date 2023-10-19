@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .main{
+            width:900px;
+            height: 800px;
+            background-color: rgb(4, 34, 36);;
+        }
+        .page{
+            background-color: rgb(49,188,200);
+            color: white;
+            padding:20px;
+        }
+        .active{
+            color:white;
+            text-decoration: none;
+            font-weight: 900;
+            padding:5px;
+            
+        }
+        #header{
+            background-color:rgb(15,69,72);
+            color:white;
+            /* padding:30px; */
+            box-shadow: inset 5px 5px rgb(15,69,72);
+           display:flex;
+           align-items: end;
+           height:80px;
+           padding-left:45px;
+           font-size:larger;
+        }
+        
+        
+        </style>
+</head>
+<body>
+  <form action="" onsubmit="return input433()" class="main" >
+    <div class="page">
+        <a href="" class="active"><span>Result</span></a>
+        <a href="" class="active"><span style="margin-left:15px; ">Reappear Result of 1st and 2nd Assessment of 1st Year (Batch 18,19,20)</span></a> 
+    </div>
+    <div id="header">
+        <h1>
+            <span style="font-size: 20px">Haryana State Board of Technical Education</span>
+        </h1>
+</div>
+<table>
+    <tr>
+        <td colspan="5" style=" text-align: center; color:white" id="background-color">
+         <strong>Result of  
+            
+            <span style="font-size:Large;">2023-02</span>
+            </strong>
+           
+            </td>
+    </tr>
+    <tr>
+        <td style="width: 100px; height: 26px; color:white">
+            Roll Number:</td>
+        <td style="width: 100px; height: 26px">
+            <input type="text" maxlength="15" /></td>
+        <td colspan="2" rowspan="1">
+            &nbsp;
+        </td>
+        <td style="width: 100px; height: 26px">
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100px; height: 26px">
+
+        </td>
+        <td style="width: 100px; height: 26px">
+            <input type="text" value="5 x 8 P 0" id="capca" style="height:50px; width:173px; font-size:larger; font-style:Curlz MT;">
+            
+        </td>
+        <td colspan="2" rowspan="1">
+            <span style="color:red" id="error"></span>
+        </td>
+        <td style="width: 100px; height: 26px">
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 100px; height: 26px">
+            
+        </td>
+        
+        <td  style="height: 26px;  color:white" colspan="4">
+            Type the letters of above image below
+            </td>
+    </tr>
+    <tr>
+        <td style="width: 100px; height: 26px">
+        </td>
+        <td style="width: 100px; height: 26px">
+            <input  type="text" id="second" /></td>
+       
+       
+    </tr>
+    <tr>
+            <td style="width: 100px; height: 26px">
+            </td>
+            <td style="width: 100px; height: 26px">
+                <input type="submit"  value="Search" /></td>
+            <td colspan="2" rowspan="1">
+                &nbsp;</td>
+            <td style="width: 100px; height: 26px">
+                
+            </td>
+        </tr>
+ 
+    </table>
+  </form>
+</body>
+<script>
+    let Array =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+                "0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",
+                "R","S","T","U","V","W","X","Y","Z"]
+
+    function Capcha(value){
+        let Capcha=""
+        for(let i=0;i<value;i++)
+        {
+            Capcha+=Array[Math.floor(Math.random()*Array.length)]
+        }
+      console.log(Capcha)
+      document.getElementById("capca").value=Capcha;
+
+     
+    }
+    Capcha(6)
+
+
+    function input433()
+    {
+        let firstInput = document.getElementById("capca").value;
+       
+     let secondInput=document.getElementById("second").value;
+     console.log(typeof(firstInput))
+        console.log(typeof(secondInput))
+         
+      if(firstInput==secondInput)
+      {
+        document.getElementById("error").innerHTML = " "
+       
+        
+      }
+      else{
+        document.getElementById("error").innerHTML = " Retry"
+        return false
+            
+      }
+    }
+
+</script>
+</html>

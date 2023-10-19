@@ -1,0 +1,36 @@
+.box{
+    height:1250px;
+     
+    background-color:rgb(2, 2, 134) ;
+}
+#btn{
+    cursor: pointer;
+}
+.box-2{
+   
+    width:800px;
+    background-color: rgb(1, 1, 77);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cox{
+    height:400px;
+    width:700px;
+    background-color:rgb(4, 4, 71) ;
+    margin-top: 150px;
+    border-radius: 30px;
+
+  }
+  h4{
+    background-image: linear-gradient(orange,red);
+    width:400px;
+    margin: auto;
+    box-shadow: 3px 3px  black;
+  }
+  .main{
+    width: 450px;
+    
+  }
+  .one, .two, .three{
+    border-radius: 20px;
+
+  }
